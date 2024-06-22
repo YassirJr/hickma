@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
-      public function index()
+    public function index()
     {
         $reservations = Reservation::all();
         return response()->json($reservations);
@@ -16,7 +16,7 @@ class ReservationController extends Controller
 
     public function store(ReservationRequest $request)
     {
-         Reservation::create($request->validated());
+        Reservation::create($request->validated());
 
         return response()->json(true);
     }
@@ -33,9 +33,9 @@ class ReservationController extends Controller
     }
 
 
-    public function update_status(Request $request ,$id)
+    public function update_status(Request $request, $id)
     {
-        Reservation::find($id)->update(['status'=>$request->status]);
+        Reservation::find($id)->update(['status' => $request->status]);
         return response()->json(true);
     }
 }
