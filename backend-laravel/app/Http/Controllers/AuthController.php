@@ -57,8 +57,8 @@ class AuthController extends Controller
 
     public function user()
     {
-        $user = Auth::user();
-        $user = $user->only(['id', 'email', 'role']);
+        $id = auth()->id();
+        $user = User::with(['reservation:id,mentor_id,user_id,status,hour'])->find($id);
 
         return response()->json($user);
     }

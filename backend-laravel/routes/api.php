@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,7 @@ Route::post('login', [AuthController::class, 'login']);
 Route::middleware(['api', 'auth:sanctum'])->group(function () {
     Route::get('me', [AuthController::class, 'user']);
 });
+
+
+Route::apiResource('reservations', ReservationController::class);
+Route::post('update_status/{id}', [ReservationController::class, 'update_status']);
