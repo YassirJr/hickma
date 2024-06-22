@@ -16,8 +16,8 @@ class ReservationRequest extends FormRequest
     {
         return [
             'user_id' => 'required|integer|exists:users,id',
-            'mentor_id' => 'required|integer|exists:mentors,id',
-            'status' => 'required|string',
+            'mentor_id' => 'required|integer|exists:users,id',
+            'status' => 'nullable|string',
             'hour' => 'required|date_format:Y-m-d H:i:s',
         ];
     }

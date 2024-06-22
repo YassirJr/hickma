@@ -21,7 +21,7 @@ class AdminSeeder extends Seeder
         foreach ($adminList as $admin) {
             $user = User::firstOrCreate(
                 ['name' => $admin['name']],
-                ['email' => $admin['email'], 'password' =>'12345678']
+                ['email' => $admin['email'], 'role'=>'mentor', 'password' =>'12345678']
             );
 
         }
