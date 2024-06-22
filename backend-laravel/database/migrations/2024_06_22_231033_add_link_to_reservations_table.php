@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mentors', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('last_name');
-            $table->timestamps();
+        Schema::table('reservations', function (Blueprint $table) {
+            $table->string('link')->after('status');
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('mentors');
+        Schema::table('reservations', function (Blueprint $table) {
+            //
+        });
     }
 };

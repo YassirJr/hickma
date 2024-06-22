@@ -35,7 +35,17 @@ class ReservationController extends Controller
 
     public function update_status(Request $request, $id)
     {
-        Reservation::find($id)->update(['status' => $request->status]);
+
+        $reservation = Reservation::findOrFail($id);
+
+        $data = ['status' => $request->status];
+
+        if ($request->has('link')) {
+            $data['link'] = $request->link;
+        }
+
+        $reservation->update($data);
+
         return response()->json(true);
     }
 }
