@@ -58,8 +58,10 @@ class AuthController extends Controller
     public function user()
     {
         $id = auth()->id();
-        $user = User::with(['reservation:id,mentor_id,user_id,status,hour'])->find($id);
 
+        $user = User::select(['id', 'name', 'role'])
+            ->with(['reservations:id,mentor_id,user_id,status,hour'])
+            ->find($id);
         return response()->json($user);
     }
 
