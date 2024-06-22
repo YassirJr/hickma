@@ -12,6 +12,7 @@ class Reservation extends Model
         'user_id',
         'mentor_id',
         'status',
+        'link',
         'hour'
     ];
        protected $casts = [
