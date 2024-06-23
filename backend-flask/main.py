@@ -11,7 +11,6 @@ DATA_PATH = 'data_ecc.csv'
 data = pd.read_csv(DATA_PATH, on_bad_lines='skip')
 
 input_cols = data.columns.drop(['id_etudiant']) #, 'PFE'])  # Excluding 'id_etudiant' and 'PFE'
-print(input_cols)
 # Separate categorical and numerical columns
 categorical_cols = data.select_dtypes(include=['object']).columns
 numerical_cols = data.select_dtypes(include=[np.number]).columns
@@ -65,13 +64,13 @@ def get_recommendations(input_data, top_n):
     
     return recommendations.to_dict(orient='records')
 
-@app.route('/get-recommendations', methods=['GET'])
+@app.route('/get-recommendations', methods=['POST'])
 def api_get_recommendations():
     try:
         content = request.get_json()
         top_n = content.get('top_n', 2)
         partial_input = {k: v for k, v in content.items() if k in input_cols}
-        
+        print(top_n , partial_input)
         recommendations = get_recommendations(partial_input, top_n)
         return jsonify({'recommendations': recommendations}), 200
     except Exception as e:
