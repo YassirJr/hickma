@@ -1,0 +1,28 @@
+.card {
+  border-radius: 15px;
+  border: none;
+}
+
+.btn-light {
+  border-radius: 20px;
+  background-color: white;
+  color: #000;
+  border: none;
+  padding: 5px 15px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.list-unstyled li {
+  margin-bottom: 5px;
+}
+.test{
+  background:red;
+}
