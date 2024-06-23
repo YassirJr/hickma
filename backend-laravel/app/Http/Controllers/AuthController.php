@@ -41,6 +41,7 @@ class AuthController extends Controller
         return response()->json([
             'token' => $token->plainTextToken,
             'user' => [
+                'id'=>$request->user()->id,
                 'name' => $request->user()->name,
                 'role' => $request->user()->role
             ]
