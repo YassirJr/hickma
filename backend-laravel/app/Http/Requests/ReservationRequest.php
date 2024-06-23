@@ -18,7 +18,8 @@ class ReservationRequest extends FormRequest
             'user_id' => 'required|integer|exists:users,id',
             'mentor_id' => 'required|integer|exists:users,id',
             'status' => 'nullable|string',
-            'hour' => 'required|date_format:Y-m-d H:i:s',
+//            'hour' => 'required|date_format:Y-m-d H:i:s',
+            'hour' => 'required|date',
         ];
     }
 }
