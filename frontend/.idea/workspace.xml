@@ -6,14 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="12701222-8122-457f-bc64-c51fbe542475" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../backend-flask/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-flask/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-laravel/database/seeders/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-laravel/database/seeders/AdminSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-laravel/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/parcours-apprentissage/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/parcours-apprentissage/page.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/add/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/add/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/mentor/page.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/etudiant-navbar/EtudiantNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/etudiant-navbar/EtudiantNavbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/form/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/form/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/form/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/form/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context/UserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/context/UserContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "feat/front-end",
-    "last_opened_file_path": "/Users/jr/Downloads/hickma/frontend/app/dashboard/etudiant/rdv",
+    "last_opened_file_path": "/Users/jr/Downloads/hickma/frontend/app/dashboard/etudiant",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,6 +75,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/dashboard/etudiant" />
+      <recent name="$PROJECT_DIR$/app/dashboard/mentor" />
+      <recent name="$PROJECT_DIR$/component" />
       <recent name="$PROJECT_DIR$/app/dashboard/etudiant/rdv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -93,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719059390444</updated>
       <workItem from="1719059391876" duration="1062000" />
-      <workItem from="1719084940317" duration="9903000" />
+      <workItem from="1719084940317" duration="25478000" />
     </task>
     <servers />
   </component>

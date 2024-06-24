@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {useUserContext} from "@/context/UserContext";
 
-function EtudiantNavbar(props) {
+function MentorNavbar(props) {
     const {logout}  = useUserContext()
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -18,15 +18,12 @@ function EtudiantNavbar(props) {
                 <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" href="/dashboard/etudiant/parcours-apprentissage">
-                                parcours d’apprentissage
+                            <Link className="nav-link" href="/dashboard/mentor/rdv">
+                                Rendez-vous
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link  className="nav-link" href="/dashboard/etudiant/rdv">gestion des rendez-vous</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" href="/dashboard/etudiant/profile">profile</Link>
+                            <Link className="nav-link" href="/dashboard/mentor/profile">profile</Link>
                         </li>
                         <button className='btn btn-warning' onClick={logout}>
                             Déconnexion
@@ -38,4 +35,4 @@ function EtudiantNavbar(props) {
     );
 }
 
-export default EtudiantNavbar;
+export default MentorNavbar;

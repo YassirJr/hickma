@@ -25,10 +25,16 @@ class User extends Authenticatable
         'role',
     ];
 
-    public function reservations (): HasMany
+    public function reservationsAsUser(): HasMany
     {
-        return $this->hasMany(Reservation::class);
+        return $this->hasMany(Reservation::class, 'user_id');
     }
+
+    public function reservationsAsMentor(): HasMany
+    {
+        return $this->hasMany(Reservation::class, 'mentor_id');
+    }
+    
     /**
      * The attributes that should be hidden for serialization.
      *

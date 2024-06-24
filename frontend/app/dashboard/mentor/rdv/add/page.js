@@ -2,20 +2,22 @@
 import {useState, useEffect} from 'react';
 import {axiosInstance} from "@/api/axios";
 import {toast} from "react-toastify";
+import {mentors} from "@/data/mentors";
 import {useRouter} from "next/navigation";
 import {useUserContext} from "@/context/UserContext";
 
 
 const CreateRendezVous = () => {
     const router = useRouter()
+
     const [formData, setFormData] = useState({
         mentor_id: '',
         description: '',
         hour: '',
     });
 
-    const {user, setUser} = useUserContext();
-    const [mentors, setMentors] = useState([]);
+    const {user} = useUserContext();
+
 
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
@@ -26,38 +28,23 @@ const CreateRendezVous = () => {
 
         const rendezVousData = {
             user_id: parseInt(user?.id),
-            ...formData, mentor_id: parseInt(formData.mentor_id),
+            ...formData , mentor_id : parseInt(formData.mentor_id),
         };
 
         try {
             const response = await axiosInstance.post('/reservations', rendezVousData);
-            if (response.status === 200) {
 
-                toast.success('Rendez-vous créé avec succès!', {position: "top-right"});
+            if (response.status === 200) {
+                toast.success('Rendez-vous créé avec succès!' , {position: "top-right"});
                 router.push('/dashboard/etudiant/rdv');
                 // Reset form or redirect
             } else {
-                toast.error('Échec de création de rendez-vous', {position: "top-right"});
+                toast.error('Échec de création de rendez-vous' , {position: "top-right"});
             }
         } catch (error) {
-            toast.error('Une erreur s’est produite lors de la création du rendez-vous', {position: "top-right"});
+            toast.error('Une erreur s’est produite lors de la création du rendez-vous' , {position: "top-right"});
         }
     };
-
-    const getMentors = async () => {
-        try {
-            const response = await axiosInstance.get('/mentors');
-            if (response.status === 200) {
-                setMentors(response.data);
-            }
-        } catch (error) {
-            toast.error('Une erreur s’est produite lors de la récupération des mentors', {position: "top-right"});
-        }
-    }
-
-    useEffect(() => {
-        getMentors();
-    }, []);
 
     return (
         <div className="container mt-5">

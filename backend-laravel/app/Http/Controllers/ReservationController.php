@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ReservationRequest;
 use App\Models\Reservation;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
     public function index()
     {
-        $reservations = Reservation::all();
-        return response()->json($reservations);
+
+        $id = auth()->id();
+        $user = User::with(['reservations:id,mentor_id,user_id,status,hour,link'])
+            ->find($id);
+        return response()->json($user);
     }
 
     public function store(ReservationRequest $request)

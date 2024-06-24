@@ -28,6 +28,7 @@ for col in numerical_cols:
 knn_model = NearestNeighbors(n_neighbors=5)
 knn_model.fit(data[input_cols])
 
+
 def get_recommendations(input_data, top_n):
     # Create a DataFrame for KNN input with the correct structure and data types
     knn_input = pd.DataFrame(columns=input_cols)
