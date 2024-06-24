@@ -115,42 +115,23 @@ const MultiStepForm = () => {
                                         <Modal.Body>
                                             <h4>Data Science</h4>
                                             <p>
-                                                Je suis ravi de savoir que tu t'intéresses à la data science, un
-                                                domaine passionnant et en pleine croissance. Pour maximiser ton
-                                                potentiel et t'assurer une solide fondation, il est essentiel de te
-                                                concentrer sur certaines matières clés. Voici quelques suggestions
-                                                pour t'aider dans cette voie :
+                                                Vous pouvez suivre comme parcours à école centrale cas :
+                                                <br/><br/>
+                                                Majeurs : aide à la décision
+                                                Électifs :
+                                                Introduction au machine learning
+                                                Réseaux télécome
+                                                Introduction à la finance du marché
+                                                Parcours :
+                                                Ingénierie des systèmes complexes
                                                 <br/><br/>
 
-                                                Mathématiques et Statistiques : Une compréhension approfondie des
-                                                concepts mathématiques et statistiques est cruciale. Cela inclut les
-                                                probabilités, l'algèbre linéaire, et l'inférence statistique.
+                                                Option : science de données et digitalisation
                                                 <br/><br/>
 
-                                                Programmation : Maîtrise des langages de programmation tels que
-                                                Python et R. Ces outils sont indispensables pour manipuler les
-                                                données et implémenter des algorithmes.
-                                                <br/><br/>
-
-                                                Bases de Données : Apprends à gérer et interroger des bases de
-                                                données avec SQL. Comprendre comment structurer et accéder aux
-                                                données efficacement est essentiel.
-                                                <br/><br/>
-
-                                                Apprentissage Automatique : Familiarise-toi avec les concepts et
-                                                techniques de l'apprentissage automatique (machine learning). Les
-                                                bibliothèques comme scikit-learn, TensorFlow et PyTorch sont des
-                                                incontournables.
-                                                <br/><br/>
-
-                                                Visualisation de Données : Savoir comment visualiser les données
-                                                pour en tirer des insights est une compétence précieuse. Utilise des
-                                                outils comme Matplotlib, Seaborn et Tableau.
-                                                <br/><br/>
-
-                                                Projets Pratiques : Mets en pratique tes connaissances à travers des
-                                                projets concrets. Cela te permettra de développer des compétences
-                                                pratiques et de créer un portfolio qui démontrera tes capacités.
+                                                Projet pfe :
+                                                Détection de Fraude dans les Transactions Financières ,
+                                                Analyse de Sentiments sur les Réseaux Sociaux
                                             </p>
                                         </Modal.Body>
                                     </>
@@ -171,37 +152,18 @@ const MultiStepForm = () => {
                                             </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
-                                            <h4>Professeurs</h4>
+                                            <h4>
+                                                les mentors qui peuvent vous aider à suivre votre parcours d'apprentissage
+                                            </h4>
                                             <p>
-                                                Les professeurs sont des experts dans leur domaine et peuvent
-                                                t'apporter des connaissances approfondies sur des sujets spécifiques.
-                                                N'hésite pas à les consulter pour des conseils académiques et des
-                                                orientations de carrière.
-                                                <br/><br/>
-
-                                                Tuteurs : Les tuteurs sont là pour t'aider à surmonter les
-                                                difficultés académiques et à améliorer tes compétences. Ils peuvent
-                                                te fournir un soutien personnalisé et des ressources supplémentaires
-                                                pour t'aider à réussir.
-                                                <br/><br/>
-
-                                                Lauréats : Les anciens élèves qui ont réussi dans leur parcours
-                                                d'apprentissage peuvent te donner des conseils pratiques et des
-                                                perspectives uniques. Ils peuvent partager leur expérience et te
-                                                guider dans tes choix.
-                                                <br/><br/>
-
-                                                Coach : Les coachs sont des professionnels de l'accompagnement qui
-                                                peuvent t'aider à développer tes compétences, à atteindre tes
-                                                objectifs et à surmonter les obstacles. Ils peuvent t'apporter un
-                                                soutien moral et te motiver à donner le meilleur de toi-même.
+                                                Madame kawtar el zahrouni , ayoub el jaouahari
                                             </p>
                                         </Modal.Body>
                                     </>
                                 )
                             },
                             {
-                                title: "SYLLABUS",
+                                title: "LES LIENS COURSERA",
                                 description: "Vous Trouverez Des Syllabus Liés aux Parcours D'apprentissage de L'ecc",
                                 items: ['Informatique', 'Electronique', 'Génie Civil', 'Chimie', 'Physique'],
                                 showModal: showSyllabusModal,
@@ -211,56 +173,25 @@ const MultiStepForm = () => {
                                     <>
                                         <Modal.Header closeButton>
                                             <Modal.Title id="contained-modal-title-vcenter-3">
-                                                Syllabus
+                                                Les liens coursera
                                             </Modal.Title>
                                         </Modal.Header>
                                         <Modal.Body>
-                                            <h4>Informatique</h4>
+                                            <h4 className='my-3'>
+                                                Vous pouvez suivre des cours en ligne sur coursera pour améliorer vos compétences
+                                            </h4>
                                             <ul>
-                                                <li><a href="https://www.coursera.org/learn/programmation-orientee-objet-java">Programmation Orientée Objet avec Java | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/programmation-python">Programmation pour tous (initié) en Python | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/administation-systeme-reseaux-infrastructure-informatiques">Administration système et réseaux d'infrastructures informatiques | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/professional-certificates/google-it-support">Google IT Support Certificate (Professional Certificate) | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/securite-informatique-dangers-numerique">Sécurité informatique et dangers du numérique | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/systemes-information-geographique">Systèmes d'Information Géographique - SIG | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/intro-cybersecurite">Les bases de la cybersécurité pour tous | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/professional-certificates/google-data-analytics-fr">Analyse de données : Google Certificate Professionnel | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/linux-systemes-exploitation">Les systèmes d'exploitation Linux : Devenir un utilisateur performant | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/administation-systeme-reseaux-infrastructure-informatiques">Administration système et services d'infrastructure informatique | Coursera</a></li>
+
+
+                                                <li><a
+                                                    href="https://www.coursera.org/professional-certificates/ibm-data-science" target='_blank'>
+                                                    IBM Data Science Certificate Professionnel | Coursera
+                                                    </a></li>
+                                                <li><a
+                                                    href="https://www.coursera.org/professional-certificates/google-data-analytics" target='_blank'>Analyse
+                                                    de données : Google Certificate Professionnel | Coursera</a></li>
                                             </ul>
 
-                                            <h4>Electronique</h4>
-                                            <ul>
-                                                <li><a href="https://www.coursera.org/learn/electronique-analogique">Initiation à l'électronique analogique : des concepts aux applications | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/digital-systems">Digital Systems: From Logic Gates to Processors | Coursera</a></li>
-                                            </ul>
-
-                                            <h4>Génie Civil</h4>
-                                            <ul>
-                                                <li><a href="https://www.coursera.org/learn/mechanics-1">Mécanique des matériaux 1 : Concepts fondamentaux de la contrainte et de la déformation et de la charge axiale | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/centrale-thermique-vapeur">Fonctionnement d'une centrale thermique à vapeur | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/resistancedesmateriauxessentiel">Résistance des matériaux : l'essentiel | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/solid-waste-management">Solid Waste Management</a></li>
-                                                <li><a href="https://www.coursera.org/learn/water-treatment">Water Treatment</a></li>
-                                            </ul>
-
-                                            <h4>Chimie</h4>
-                                            <ul>
-                                                <li><a href="https://www.coursera.org/learn/thermodynamique-applications">Thermodynamique : applications | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/physical-chemistry">Introduction to Physical Chemistry</a></li>
-                                            </ul>
-
-                                            <h4>Physique</h4>
-                                            <ul>
-                                                <li><a href="https://www.coursera.org/learn/physique-particules">Physique des particules : une introduction | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/thermodynamique-fondements">Thermodynamique : fondements | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/mecanique-quantique">Mécanique quantique | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/elements-mecanique">Éléments de Mécanique | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/vibrations-ondes">Vibrations et ondes mécaniques : fondements et applications | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/dynamique-fluides-numerique">Dynamique des fluides numériques appliquée | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/methodes-numeriques">Méthodes numériques | Coursera</a></li>
-                                                <li><a href="https://www.coursera.org/learn/thermodynamique-applications">Thermodynamique : applications | Coursera</a></li>
-                                            </ul>
                                         </Modal.Body>
                                     </>
                                 )

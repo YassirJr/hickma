@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12701222-8122-457f-bc64-c51fbe542475" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../backend-flask/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-flask/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-laravel/database/seeders/AdminSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-laravel/database/seeders/AdminSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-laravel/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/parcours-apprentissage/page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/parcours-apprentissage/page.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/add/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/add/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/mentor/page.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/etudiant/rdv/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/etudiant-navbar/EtudiantNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/etudiant-navbar/EtudiantNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/form/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/form/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/context/UserContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/context/UserContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719059390444</updated>
       <workItem from="1719059391876" duration="1062000" />
-      <workItem from="1719084940317" duration="25478000" />
+      <workItem from="1719084940317" duration="33084000" />
     </task>
     <servers />
   </component>
