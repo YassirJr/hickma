@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class AdminSeeder extends Seeder
 {
@@ -13,17 +15,46 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-      $adminList = [
-            ['name' => 'SuperAdmin', 'email' => 'superadmin@gmail.com'],
-            ['name' => 'hickma', 'email' => 'hickma@gmail.com'],
-        ];
-
-        foreach ($adminList as $admin) {
-            $user = User::firstOrCreate(
-                ['name' => $admin['name']],
-                ['email' => $admin['email'], 'role'=>'mentor', 'password' =>'12345678']
-            );
-
-        }
+    
+        User::insert(
+            [
+                [
+                    'name' => 'Aidouch Tilila',
+                    'role' => 'mentor',
+                    'email' => 'aidouch.tilila@example.com',
+                    'password' => Hash::make('password')
+                ],
+                [
+                    'name' => 'Eloudghiri Malak',
+                    'role' => 'mentor',
+                    'email' => 'eloudghiri.malak@example.com',
+                    'password' => Hash::make('password')
+                ],
+                [
+                    'name' => 'Rkaina Majda',
+                    'role' => 'mentor',
+                    'email' => 'rkaina.majda@example.com',
+                    'password' => Hash::make('password')
+                ],
+                [
+                    'name' => 'Doe Jane',
+                    'role' => 'mentor',
+                    'email' => 'doe.jane@example.com',
+                    'password' => Hash::make('password')
+                ],
+                [
+                    'name' => 'Brown Charlie',
+                    'role' => 'mentor',
+                    'email' => 'brown.charlie@example.com',
+                    'password' => Hash::make('password')
+                ],
+                [
+                    'name' => 'Johnson Emily',
+                    'role' => 'mentor',
+                    'email' => 'johnson.emily@example.com',
+                    'password' => Hash::make('password')
+                ]
+            ]
+                );
     }
 }

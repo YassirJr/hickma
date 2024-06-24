@@ -27,6 +27,7 @@ const LoginForm = () => {
             // If the form is successfully submitted, show a success toast
             axiosInstance.post('/login', {email, password}).then(res => {
                 if (res.status === 200) {
+                    toast.success("Connexion réussie", {position: "top-right"});
                     const {user, token} = res.data
                     setToken(token)
                     setUser(user)
@@ -34,9 +35,9 @@ const LoginForm = () => {
                     localStorage.setItem('AUTHENTICATED', true)
                     setAuthenticated(true)
                     if (user?.role?.toLowerCase() === 'student') {
-                        router.push('/dashboard/etudiant')
+                        router.push('/dashboard/etudiant/parcours-apprentissage')
                     } else {
-                        router.push('/dashboard/mentor')
+                        router.push('/dashboard/mentor/rdv')
                     }
                 }
             }).catch(err => {

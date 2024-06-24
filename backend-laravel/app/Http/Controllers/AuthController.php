@@ -41,7 +41,7 @@ class AuthController extends Controller
         return response()->json([
             'token' => $token->plainTextToken,
             'user' => [
-                'id'=>$request->user()->id,
+                'id' => $request->user()->id,
                 'name' => $request->user()->name,
                 'role' => $request->user()->role
             ]
@@ -56,13 +56,38 @@ class AuthController extends Controller
         return response()->json(true);
     }
 
-    public function user()
+    /* public function user()
     {
         $id = auth()->id();
+        
+        $user = User::find($id);
 
-        $user = User::with(['reservations:id,mentor_id,user_id,status,hour,link'])
-            ->find($id);
+        if ($user->role === 'mentor') {
+            $user->load(['reservationsAsMentor:id,mentor_id,user_id,status,hour,link']);
+        } else {
+            $user->load(['reservationsAsUser:id,mentor_id,user_id,status,hour,link']);
+        }
+        
+        return response()->json($user);
+    } */
+    public function user()
+    {
+        $user = auth()->user();
+
+        if ($user->role === 'student') {
+            $user->load(['reservationsAsUser:id,mentor_id,user_id,status,hour,link']);
+            $reservations = $user->reservationsAsUser;
+        } elseif ($user->role === 'mentor') {
+            $user->load(['reservationsAsMentor:id,mentor_id,user_id,status,hour,link']);
+            $reservations = $user->reservationsAsMentor;
+        } else {
+            return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        $user->reservations = $reservations;
+        unset($user->reservationsAsUser);
+        unset($user->reservationsAsMentor);
+
         return response()->json($user);
     }
-
 }

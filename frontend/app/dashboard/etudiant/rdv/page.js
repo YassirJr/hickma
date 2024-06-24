@@ -1,18 +1,49 @@
 "use client";
 import {axiosInstance} from "@/api/axios";
 import {toast} from "react-toastify";
-import {mentors} from "@/data/mentors";
-import {useRouter} from "next/navigation";
 import Link from "next/link";
 import {useUserContext} from "@/context/UserContext";
-
+import {useEffect, useState} from "react";
+import {useRouter} from "next/navigation";
 
 const ListeRendezVous = () => {
 
-    const {user: {reservations}} = useUserContext()
-    const getMentorById = (id) => {
-        return mentors.find(e => e.id.toString() === id.toString())
+    const {user: {reservations}, setUser} = useUserContext()
+    const [mentors, setMentors] = useState()
+    const router = useRouter()
+
+    const getMentors = async () => {
+        try {
+            const response = await axiosInstance.get('/mentors');
+            if (response.status === 200) {
+                setMentors(response?.data)
+            }
+        } catch (error) {
+            toast.error('Une erreur s’est produite lors de la récupération des mentors', {position: "top-right"});
+        }
     }
+
+    const getMentorById =  (id) => {
+        return mentors?.find(e => e.id.toString() === id.toString()) || {}
+    }
+
+
+
+    useEffect(() => {
+
+        axiosInstance.get('/me').then(({data}) => {
+            localStorage.setItem('user', JSON.stringify(data));
+            setUser(data)
+        }).catch((reason) => {
+            toast.error("Veuillez vous connecter pour continuer.", {position: "top-right"});
+            router.push('/sign-in')
+        })
+
+        getMentors();
+
+
+    }, []);
+
     return (
         <div className="container mt-5">
             <div className="d-flex justify-content-between my-3">
@@ -41,11 +72,20 @@ const ListeRendezVous = () => {
                                     <tr key={index}>
                                         <th scope="row">{rdv?.id}</th>
                                         <td>{getMentorById(rdv?.mentor_id)?.name}</td>
-                                        <td>{rdv?.status}</td>
-                                        <td>{rdv?.hour}</td>
+                                        <td
+                                            className={`text-${rdv?.status === 'accepted' ? 'success' : rdv?.status === 'refused' ? 'danger' : 'warning'}`}
+                                        >
+                                            {rdv?.status}
+                                        </td>
                                         <td>
                                             {
-                                                !!rdv.link ? <a href={rdv.link} target="_blank">Meeting Link</a> : 'Pas de lien'
+                                                new Date(rdv?.hour).toLocaleDateString() + ' ' + new Date(rdv?.hour).toLocaleTimeString()
+                                            }
+                                        </td>
+                                        <td>
+                                            {
+                                                !!rdv.link ?
+                                                    <a href={rdv.link} target="_blank">Meeting Link</a> : 'Pas de lien'
                                             }
                                         </td>
                                     </tr>
